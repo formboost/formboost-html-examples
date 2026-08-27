@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form — Formboost Example</title>
+</head>
+<body>
+  <main>
+    <h1>Share feedback</h1>
+    <form action="https://formboost.app/f/YOUR_ENDPOINT" method="POST">
+      <label>
+        Email (optional)
+        <input name="email" type="email" />
+      </label>
+
+      <label>
+        Rating
+        <select name="rating" required>
+          <option value="">Choose a rating</option>
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Good</option>
+          <option value="3">3 - Okay</option>
+          <option value="2">2 - Poor</option>
+          <option value="1">1 - Very poor</option>
+        </select>
+      </label>
+
+      <label>
+        Feedback
+        <textarea name="feedback" rows="5" required></textarea>
+      </label>
+
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" hidden />
+      <button type="submit">Send feedback</button>
+    </form>
+  </main>
+</body>
+</html>
