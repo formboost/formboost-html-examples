@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form — Formboost Example</title>
+</head>
+<body>
+  <main>
+    <h1>Quick product survey</h1>
+    <form action="https://formboost.app/f/YOUR_ENDPOINT" method="POST">
+      <label>
+        Role
+        <select name="role" required>
+          <option value="">Select your role</option>
+          <option value="developer">Developer</option>
+          <option value="founder">Founder</option>
+          <option value="designer">Designer</option>
+          <option value="marketer">Marketer</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Would you recommend this product?</legend>
+        <label><input type="radio" name="recommend" value="yes" required /> Yes</label>
+        <label><input type="radio" name="recommend" value="no" /> No</label>
+      </fieldset>
+
+      <label>
+        What should we improve?
+        <textarea name="improvement" rows="5"></textarea>
+      </label>
+
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" hidden />
+      <button type="submit">Submit survey</button>
+    </form>
+  </main>
+</body>
+</html>
